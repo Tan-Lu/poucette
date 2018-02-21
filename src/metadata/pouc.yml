@@ -1,0 +1,27 @@
+# PURL configuration for http://purl.obolibrary.org/obo/pouc
+
+idspace: POUC
+base_url: /obo/pouc
+
+products:
+- pouc.owl: https://raw.githubusercontent.com/Tan-Lu/poucette/master/pouc.owl
+- pouc.obo: https://raw.githubusercontent.com/Tan-Lu/poucette/master/pouc.obo
+
+term_browser: ontobee
+example_terms:
+- POUC_0000000
+
+entries:
+
+- prefix: /releases/
+  replacement: https://raw.githubusercontent.com/Tan-Lu/poucette/v
+
+- prefix: /tracker/
+  replacement: https://github.com/Tan-Lu/poucette/issues
+
+- prefix: /about/
+  replacement: http://www.ontobee.org/ontology/POUC?iri=http://purl.obolibrary.org/obo/
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/Tan-Lu/poucette/master/
